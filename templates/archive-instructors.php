@@ -133,20 +133,11 @@ if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(
 						<a href="<?php echo get_permalink(); ?>" title="<?php the_title_attribute(array('echo' => true)); ?>" >
 						<div class="thumbnail ">
 							<?php
-							if (!empty(get_the_post_thumbnail( array('attachment' => $thumbnail_id)))):
-                                $image_url = get_the_post_thumbnail( array(
-                                        'attachment'    => $thumbnail_id,  // Int: Image post ID
-                                        'size'          => 'instructor_image_size',                    // Str: WP defined image size
-                                        'width'         => '',                               // Int: Custom image width
-                                        'height'        => '',                               // Int: Custom image height
-                                        'crop'          => 'center-center',                     // Str: Crop location
-                                        'alt'           => $title,                              // Str: Custom alt tag for image
-                                        'class'         => 'instructor-thumbnail',              // Str: Add custom classes
-                                        'return'        => 'html',                              // Str: Return html or src
-                                        'style'         => '',                                  // Str: Adds inline styles
-                                        'retina'        => true,                                // Bool: Check if retina is enabled
-                                    ) );
-                                echo $image_url;
+							if (!empty(get_the_post_thumbnail_url( get_the_ID(), 'full'))):
+                                $image_url = get_the_post_thumbnail_url( get_the_ID(), 'full') ;
+                                ?>
+								<img width="300" height="300" src="<?php echo $image_url ?>" alt="<?php the_title(); ?>" />
+								<?php
 							else: ?>
 							    <?php $image_url = MZOO_INSTRUCTOR_URL . 'img/default-person.png'; ?>
 								<img width="300" height="300" src="<?= MZOO_INSTRUCTOR_URL ?>img/default-instructor.png" alt="<?php the_title(); ?>" />
@@ -163,11 +154,10 @@ if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(
                          "name": "<?php the_title(); ?>",
                          "worksFor": {
                          "@type": "Organization",
-                         "name": "mZoo Home Health"
+                         "name": "Intensity Tennis, Squash and Fitness Club"
                          }
                         }
                         </script>
-						<?php /* ?>
 						<div style="max-width:300px;"
 							<span><?php echo the_excerpt(); ?></span><br />
 							<?php
@@ -175,7 +165,6 @@ if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(
 								<span><?php echo $val['display_name'] . ": " . $val['content']; ?></span><br />
 							<?php endforeach; ?>
 						</div>
-						<?php */ ?>
           </div> 
           
           <?php
