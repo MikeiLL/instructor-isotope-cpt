@@ -67,7 +67,6 @@ if(!is_admin()){ // make sure the filters are only called in the frontend
 
 function load_isotope() {
     // scripts will load in footer
-    mz_pr(MZOO_INSTRUCTOR_URL . 'js/jquery.isotope.min.js');
         wp_enqueue_script( 'isotope-js', MZOO_INSTRUCTOR_URL . 'js/jquery.isotope.min.js', array( 'jquery' ), true );
         wp_enqueue_script( 'instructor-js', MZOO_INSTRUCTOR_URL . 'js/instructor.js', array( 'jquery' ), true );
         wp_enqueue_style( 'instructor-css', MZOO_INSTRUCTOR_URL . 'css/instructor.css');
