@@ -49,6 +49,7 @@ if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(
           "description": "<?php echo the_archive_description(); ?>"
         }
     </script>
+     <?php /* ?>
     <ul id="filters" class="<?=$filter_classes?>">
         <?php
             $count = count($terms);
@@ -64,6 +65,7 @@ if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(
             }
         ?>
     </ul>
+    <?php */ ?>
  
 		<div class="wpex-row clr" id="checkboxes">
   
