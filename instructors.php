@@ -8,8 +8,8 @@ use mZoo\Instructors as AC;
  * @package MZOOINSTRUCTOR
  *
  * Plugin Name: Instructors Post Type
- * Description: 	Manage and Display instructors based on specific criteris using Isotope
- * Full Description: Manage and Display instructors based on specific criteris using Isotope. Instructors is the name of a CPT, which includes custom fields and also accepts tags and categories.
+ * Description: 	Manage and Display instructors based on specific criteria using Isotope
+ * Full Description: Manage and Display instructors based on specific criteria using Isotope. Instructors is the name of a CPT, which includes custom fields and also accepts tags and categories.
  * Version: 		1.0.0
  * Author: 			Mike iLL Kilmer mZoo.org
  * Author URI: 		http://www.mZoo.com
