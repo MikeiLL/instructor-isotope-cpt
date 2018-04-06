@@ -1,0 +1,26 @@
+{
+  "name": "mikeill/instructor-isotope-cpt",
+  "description": "Custom Post Type with Isotope Filter in Archive and Slider Shortcode",
+  "keywords": [
+    "isotope",
+    "filter",
+    "jquery",
+    "wordpress",
+    "plugin"
+  ],
+  "homepage": "https://github.com/MikeiLL/instructor-isotope-cpt",
+  "license": "GPL2",
+  "authors": [
+    {
+      "name": "Mike iLL Kilmer",
+      "email": "mike@mzoo.org",
+      "homepage": "http://mzoo.org",
+      "role": "Developer"
+    }
+   ],
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=5.6",
+    "composer/installers": "~1.0"
+  }
+}
