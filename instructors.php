@@ -42,6 +42,7 @@ $our_custom_fields = new AC\MZOO_Custom_Fields(array(
 													'contact_info' => 'Contact Info',
 													'certifications' => 'Certifications'
 													));
+
 add_action( 'init', array( 'mZoo\\Instructors\\MZOO_Instructors', 'register_post_type' ), 0 );
 add_action( 'init', array( 'mZoo\\Instructors\\MZOO_Instructors', 'register_tags' ), 0 );
 add_action( 'init', array( 'mZoo\\Instructors\\MZOO_Instructors', 'register_categories' ), 0 );
@@ -61,7 +62,7 @@ if(!is_admin()){ // make sure the filters are only called in the frontend
         add_action( 'wp_enqueue_scripts', 'load_isotope' );
 } else {
         add_action('add_meta_boxes', ['mZoo\\Instructors\\MZOO_Custom_Meta_Box', 'add']);
-        add_action('save_post', ['mZoo\\Instructors\\MZOO_Custom_Meta_Box', 'save']);
+        add_action('save_post', ['mZoo\\Instructors\\MZOO_Custom_Meta_Box', 'save'], 10, 2);
 }
 // $metaboxes = new mZoo\MZOO_Custom_Meta_Box;
 
